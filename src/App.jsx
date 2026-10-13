@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
 
-const DEFAULT_API_BASE = "http://api.dev.svc.cluster.local:80";
+const DEFAULT_API_BASE = "http://api.dev.svc.cluster.local";
 const STORAGE_KEY = "smart-education-api-base";
 
 function getStoredApiBase() {
