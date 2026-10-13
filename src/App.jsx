@@ -275,7 +275,7 @@ export default function App() {
       <header className="topbar">
         <div className="brand">
           <span className="brand-mark">SE</span>
-          <span className="brand-name">Smart Education</span>
+          <span className="brand-name">Smart Education test</span>
         </div>
 
         <div className="api-config">
