@@ -15,7 +15,7 @@ env:
   BUILDX_VERSION: ${{ github.sha }}
   IMAGE_TAG: ${{ github.sha }}
   ECR_REPOSITORY: frontend
-  ECR_REGISTRY: 715489363281.dkr.ecr.eu-central-1.amazonaws.com
+  ECR_REGISTRY: '715489363281.dkr.ecr.eu-central-1.amazonaws.com'
 
 jobs:
   build-and-push:
@@ -40,7 +40,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ env.AWS_REGION }}
+          aws-region: eu-central-1
 
       - name: 🔑 Login to Amazon ECR
         id: login-ecr
