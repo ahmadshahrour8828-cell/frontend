@@ -1,3 +1,4 @@
+{{- if ( .Values.app.hpa.enabled ) }}
 ---
 kind: HorizontalPodAutoscaler
 apiVersion: autoscaling/v2
