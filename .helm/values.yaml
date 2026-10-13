@@ -5,13 +5,9 @@ app:
     maxReplicas: 1
     averageValue: 80
   ingressClass: nginx
-  url: qasem1.balouli.com
   whitelist: "0.0.0.0/0"
-  image: 907244240513.dkr.ecr.eu-central-1.amazonaws.com/frontend:latest
+  image: 715489363281.dkr.ecr.eu-central-1.amazonaws.com/frontend:latest
   env: dev
-
-  env:
-    API_URL: http://a0d1a3fd22a0a48268fc0d6306d9203c-1816871747.eu-central-1.elb.amazonaws.com
 
 resources:
   app:

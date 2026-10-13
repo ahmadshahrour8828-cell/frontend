@@ -28,9 +28,9 @@ spec:
           configMap:
             name: {{ .Chart.Name }}-nginx-config
       containers:
-        - name: app
+        - name: frontend
           imagePullPolicy: Always
-          image: {{ .Values.app.image }}
+          image: 715489363281.dkr.ecr.eu-central-1.amazonaws.com/frontend:latest
           ports:
             - containerPort: 80
               name: http
