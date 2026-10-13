@@ -3,12 +3,13 @@
 kind: HorizontalPodAutoscaler
 apiVersion: autoscaling/v2
 metadata:
-  name: {{ .Chart.Name }}
+  name: frontend
+  namespace: frontend
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ .Chart.Name }}
+    name: frontend
   minReplicas: {{ .Values.app.hpa.minReplicas }}
   maxReplicas: {{ .Values.app.hpa.maxReplicas }}
   metrics:
