@@ -4,7 +4,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: frontend
-  namespace: frontend
   annotations:
     nginx.ingress.kubernetes.io/proxy-body-size: 50m
 spec:
