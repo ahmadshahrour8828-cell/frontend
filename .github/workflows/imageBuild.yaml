@@ -2,6 +2,9 @@ name: Build and Push Docker Images
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 permissions:
   id-token: write
@@ -12,7 +15,7 @@ env:
   BUILDX_VERSION: ${{ github.sha }}
   IMAGE_TAG: ${{ github.sha }}
   ECR_REPOSITORY: frontend
-  ECR_REGISTRY: '715489363281.dkr.ecr.eu-central-1.amazonaws.com'
+  ECR_REGISTRY: 715489363281.dkr.ecr.eu-central-1.amazonaws.com
 
 jobs:
   build-and-push:
