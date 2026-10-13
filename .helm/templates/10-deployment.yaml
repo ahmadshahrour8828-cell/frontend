@@ -13,8 +13,8 @@ spec:
       maxSurge: 25%
   selector:
     matchLabels:
-      app: {{ .Chart.Name }}
-  replicas: {{ .Values.app.replicas }}
+      app: frontend
+  replicas: 3
   template:
     metadata:
       labels:
@@ -68,7 +68,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: {{ .Chart.Name }}
+    app: frontend
   ports:
     - port: 80
       targetPort: 80
