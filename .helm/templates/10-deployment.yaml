@@ -25,7 +25,7 @@ spec:
       volumes:
         - name: nginx-config
           configMap:
-            name: {{ .Chart.Name }}-nginx-config
+            name: frontend-nginx-config
       containers:
         - name: frontend
           imagePullPolicy: Always
