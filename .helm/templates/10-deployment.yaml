@@ -18,7 +18,7 @@ spec:
   template:
     metadata:
       labels:
-        app: {{ .Chart.Name }}
+        app: frontend
       annotations:
         checksum/configmap: {{ include (print $.Template.BasePath "/30-configmap.yaml") . | sha256sum }}
     spec:
@@ -29,7 +29,7 @@ spec:
       containers:
         - name: frontend
           imagePullPolicy: Always
-          image: 715489363281.dkr.ecr.eu-central-1.amazonaws.com/frontend:latest
+          image: 715489363281.dkr.ecr.eu-central-1.amazonaws.com/frontend:8094483c663251b5e403a639644bf0f38620164e
           ports:
             - containerPort: 80
               name: http
