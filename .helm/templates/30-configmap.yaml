@@ -74,5 +74,3 @@ data:
         }
       }
     }
-
-{{- if ( .Values.app.hpa.enabled ) }}
