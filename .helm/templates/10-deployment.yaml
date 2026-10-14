@@ -66,11 +66,9 @@ metadata:
   name: frontend
   namespace: dev
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: frontend
   ports:
-    - name: http
-      port: 80
+    - port: 80
       targetPort: 80
-      protocol: TCP
