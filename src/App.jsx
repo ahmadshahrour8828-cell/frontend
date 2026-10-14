@@ -275,7 +275,7 @@ export default function App() {
       <header className="topbar">
         <div className="brand">
           <span className="brand-mark">SE</span>
-          <span className="brand-name">Smart Education Learning</span>
+          <span className="brand-name">Smart Education 2</span>
         </div>
 
         <div className="api-config">
